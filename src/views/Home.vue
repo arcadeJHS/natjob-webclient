@@ -1,18 +1,23 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+
+    <pre>{{cats}}</pre>
+
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
-
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+  data () {
+    return {
+      cats: null
+    };
+  },
+  mounted () {
+    fetch('http://natjobapi.matteopiazza.wtf/cats', {method: 'GET'})
+      .then(response => response.json())
+      .then(data => this.cats = data);
   }
 }
 </script>

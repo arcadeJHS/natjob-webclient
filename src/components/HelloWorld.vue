@@ -35,12 +35,13 @@
 <script>
 export default {
   name: 'HelloWorld',
-  props: {
+  data: {
     msg: String
   },
   mounted () {
     fetch('http://natjobapi.matteopiazza.wtf/cats', {method: 'GET'})
-      .then((response) => console.log(response));
+      .then(response => response.json())
+      .then(data => console.log(data));
   }
 }
 </script>
