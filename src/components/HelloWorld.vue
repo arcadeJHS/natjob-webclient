@@ -37,6 +37,10 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
+  },
+  mounted () {
+    fetch('http://natjobapi.matteopiazza.wtf/cats', {method: 'GET'})
+      .then((response) => console.log(response));
   }
 }
 </script>
