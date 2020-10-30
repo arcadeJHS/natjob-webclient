@@ -17,6 +17,7 @@ export default {
     };
   },
   mounted () {
+    // test fetch
     const url = `${process.env.VUE_APP_API_BASE}/cats`;
     
     fetch(url, {method: 'GET'})
