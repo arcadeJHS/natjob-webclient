@@ -1,6 +1,8 @@
 <template>
   <div>
 
+    <h2>Cats</h2>
+
     <pre>{{cats}}</pre>
 
   </div>
