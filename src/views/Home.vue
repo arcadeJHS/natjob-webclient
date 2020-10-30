@@ -17,7 +17,9 @@ export default {
     };
   },
   mounted () {
-    fetch('http://natjobapi.matteopiazza.wtf/cats', {method: 'GET'})
+    const url = `${process.env.VUE_APP_API_BASE}/cats`;
+    
+    fetch(url, {method: 'GET'})
       .then(response => response.json())
       .then(data => this.cats = data);
   }
