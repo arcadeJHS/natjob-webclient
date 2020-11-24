@@ -18,7 +18,7 @@ export default {
   },
   mounted () {
     // test fetch
-    const url = `${process.env.VUE_APP_API_BASE}/cats`;
+    const url = `${process.env.VUE_APP_API_BASE}/jobs`;
     
     fetch(url, {method: 'GET'})
       .then(response => response.json())
