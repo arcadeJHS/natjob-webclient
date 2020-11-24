@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <h2>Cats</h2>
+    <h2>JOBS</h2>
 
-    <pre>{{cats}}</pre>
+    <pre>{{jobs}}</pre>
 
   </div>
 </template>
@@ -13,7 +13,7 @@ export default {
   name: 'Home',
   data () {
     return {
-      cats: null
+      jobs: null
     };
   },
   mounted () {
@@ -22,7 +22,7 @@ export default {
     
     fetch(url, {method: 'GET'})
       .then(response => response.json())
-      .then(data => this.cats = data);
+      .then(data => this.jobs = data);
   }
 }
 </script>
