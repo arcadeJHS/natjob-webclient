@@ -3,6 +3,8 @@
 
     <h2>JOBS</h2>
 
+    <a class="button is-link is-small">Search</a>
+
     <pre>{{jobs}}</pre>
 
   </div>
