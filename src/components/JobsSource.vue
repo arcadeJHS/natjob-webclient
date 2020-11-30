@@ -1,5 +1,5 @@
 <template>
-  <section v-if="source">
+  <section>
     <h2 class="text-lg font-semibold bg-blue-600 text-white p-4">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
