@@ -4,11 +4,11 @@
 
 </template>
 
-<script>
-import { reactive, toRefs } from 'vue';
+<script lang="ts">
+import { defineComponent, reactive, toRefs } from 'vue';
 import JobsSource from '@/components/JobsSource.vue';
 
-export default {
+export default defineComponent({
   name: 'JobsSources',
   components: {
     JobsSource
@@ -28,5 +28,5 @@ export default {
 
     return toRefs(state);
   }
-};
+});
 </script>
