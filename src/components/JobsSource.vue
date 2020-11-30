@@ -1,7 +1,7 @@
 <template>
   <section>
     <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative">
-      <div class="md:absolute right-0 inset-y-0 mr-4 flex items-center">
+      <div class="absolute right-0 inset-y-0 mr-4 flex items-center">
         <button 
           class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded"
           @click="toggleJobsVisibility">
