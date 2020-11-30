@@ -1,4 +1,4 @@
-export default setQueryString = (params = {}) => {
+export const setQueryString = (params = {}) => {
   if (!Object.keys(params).length) {
     return '';
   }

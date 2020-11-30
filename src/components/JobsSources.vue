@@ -7,7 +7,7 @@
 <script>
 import { defineComponent, reactive, toRefs } from 'vue';
 import JobsSource from '@/components/JobsSource.vue';
-import {setQueryString } from '@/utils/setQueryString.js';
+import { setQueryString } from '@/utils/setQueryString.js';
 
 export default defineComponent({
   name: 'JobsSources',
