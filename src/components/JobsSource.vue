@@ -11,7 +11,7 @@
       </a>
       <div class="mt-2 sm:mt-0 sm:absolute right-0 inset-y-2 mr-4 flex items-center">
         <button 
-          class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded"
+          class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded flex-grow"
           @click="toggleJobsVisibility">
           {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
         </button>
