@@ -1,6 +1,13 @@
 <template>
   <section>
-    <h2 class="text-lg font-semibold bg-blue-600 text-white p-4">
+    <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative">
+      <div class="absolute right-0 inset-y-0 mr-4 flex items-center">
+        <button 
+          class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded"
+          @click="toggleJobsVisibility">
+          {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
+        </button>
+      </div>
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{source.results.length}} annunci)
@@ -10,7 +17,7 @@
         </svg>
       </a>
     </h2>
-    <ul class="divide-y divide-gray-100 pl-4">
+    <ul v-if="jobsVisible" class="divide-y divide-gray-100 pl-4">
       <li class="py-2" v-for="job in source.results" :key="job.url">
         <article class="flex">
           <div class="min-w-0 relative flex-auto sm:pr-20 lg:pr-0 xl:pr-20">
@@ -59,10 +66,22 @@
 </template>
 
 <script>
+import { reactive, toRefs } from 'vue';
+
 export default {
   name: 'JobsSource',
   props: [
     'source'
-  ]
+  ],
+  setup() {
+    const toggleJobsVisibility = () => state.jobsVisible = !state.jobsVisible;
+
+    let state = reactive({
+      jobsVisible: false,
+      toggleJobsVisibility
+    });
+
+    return toRefs(state);
+  }
 }
 </script>
