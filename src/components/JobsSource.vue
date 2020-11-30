@@ -1,13 +1,6 @@
 <template>
   <section>
     <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative">
-      <div class="absolute right-0 inset-y-0 mr-4 flex items-center">
-        <button 
-          class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded"
-          @click="toggleJobsVisibility">
-          {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
-        </button>
-      </div>
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{source.results.length}} annunci)
@@ -16,6 +9,13 @@
           <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
         </svg>
       </a>
+      <div class="sm:absolute right-0 inset-y-0 mr-4 flex items-center">
+        <button 
+          class="hover:bg-blue-500 text-white py-1 px-2 border border-blue-500 hover:border-transparent rounded"
+          @click="toggleJobsVisibility">
+          {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
+        </button>
+      </div>
     </h2>
     <ul v-if="jobsVisible" class="divide-y divide-gray-100 pl-4">
       <li class="py-2" v-for="job in source.results" :key="job.url">
