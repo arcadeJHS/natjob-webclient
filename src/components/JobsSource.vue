@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative">
+    <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative mb-0.5">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{source.results.length}})
