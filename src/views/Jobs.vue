@@ -1,12 +1,11 @@
 <template>
   <Suspense>
 
-    <template #fallback>
+    <template #default>
       <jobs-sources />
     </template>
 
-    <template #default>
-     
+    <template #fallback>
       <div class="p-4 text-indigo-600">
         <div class="flex flex-col items-center">
           <p>Ciao Nat, sono il tuo Koala-bot!</p>
@@ -15,8 +14,6 @@
             <p class="animate-spin text-5xl">&#128040;</p>
           </div>
         </div>
-        
-        
       </div>
     </template>
 
