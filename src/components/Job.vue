@@ -5,23 +5,18 @@
         <a class="hover:underline" :href="job.url" target="_BLANK">
           <h2 class="text-indigo-800 mb-0.5 inline">
             <span class="font-semibold">{{ job.title }}</span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 inline">
-              <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-              <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-            </svg>
+            <open-link-icon />
           </h2>
         </a>
         <dl class="flex flex-wrap text-sm font-medium whitespace-pre">
           <div class="flex-none w-full mt-0.5">
             <dt class="inline mr-1 font-normal">Fonte originale:</dt>
             <dd class="inline">
-              <a class="text-indigo-600 hover:underline" :href="job.originalSourceJobs" target="_BLANK">
+              <a v-if="job.originalSource" class="text-indigo-600 hover:underline" :href="job.originalSourceJobsUrl" target="_BLANK">
                 {{ job.originalSource }}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-4 w-4 inline">
-                  <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                  <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                </svg>
+                <open-link-icon />
               </a>
+              <span v-else>n/a</span>
               </dd>
           </div>
           <div class="flex-none w-full mt-0.5">
@@ -49,9 +44,13 @@
 
 <script>
 import { reactive, toRefs } from 'vue';
+import OpenLinkIcon from '@/components/OpenLinkIcon.vue';
 
 export default {
   name: 'Job',
+  components: {
+    OpenLinkIcon
+  },
   props: [
     'job'
   ],
