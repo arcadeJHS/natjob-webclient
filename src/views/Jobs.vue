@@ -12,7 +12,7 @@
           <div class="flex-none w-10 relative pt-3">
             <div class="animate-pulse"><p class="animate-spin text-3xl absolute">&#128040;</p></div>
           </div>
-          <div class="flex-auto my-2">
+          <div class="flex-auto my-2 pl-2">
             <p> 
               Ciao Nat, sono il tuo Koala-bot!
             </p>
