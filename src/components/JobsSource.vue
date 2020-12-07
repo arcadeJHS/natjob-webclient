@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-lg font-semibold bg-blue-600 text-white p-4 relative mb-0.5">
+    <h2 class="text-lg font-semibold border-b border-green-500 text-indigo-800 p-4 relative">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{ source.results.length }})
@@ -8,7 +8,7 @@
       </a>
       <div class="mt-2 flex items-center sm:mt-0 sm:absolute sm:right-0 sm:inset-y-2 sm:mr-4">
         <button 
-          class="hover:bg-blue-500 text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded flex-grow bg-green-500"
+          class="hover:bg-blue-500 text-white py-2 px-4 border border-blue-300 hover:border-transparent rounded flex-grow bg-green-500"
           @click="toggleJobsVisibility">
           {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
         </button>
