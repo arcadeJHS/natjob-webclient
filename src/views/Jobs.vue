@@ -8,17 +8,11 @@
     <template #fallback>
      
       <div class="p-4 text-indigo-600">
-        <div class="flex">
-          <div class="flex-none w-10 relative pt-3">
-            <div class="animate-pulse"><p class="animate-spin text-3xl absolute">&#128040;</p></div>
-          </div>
-          <div class="flex-auto my-2 pl-2">
-            <p> 
-              Ciao Nat, sono il tuo Koala-bot!
-            </p>
-            <p> 
-              Sto cercando, abbi pazienza!
-            </p>
+        <div class="flex flex-col items-center">
+          <p>Ciao Nat, sono il tuo Koala-bot!</p>
+          <p>Sto cercando, abbi pazienza!</p>
+          <div class="animate-pulse mt-4">
+            <p class="animate-spin text-5xl">&#128040;</p>
           </div>
         </div>
         
