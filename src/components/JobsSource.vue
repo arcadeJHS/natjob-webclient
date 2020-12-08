@@ -7,7 +7,7 @@
         <open-link-icon />
       </a>
       <div class="mt-2 flex items-center sm:mt-0 sm:absolute sm:right-0 sm:inset-y-2 sm:mr-4">
-        <span v-if="source.error" class="text-red-500">ERROR: timeout 300000 ms exceeded</span>
+        <span v-if="source.error" class="text-red-500">{{ source.error }}</span>
         <button 
           v-if="!source.error && source.results.length"
           class="hover:bg-blue-500 text-white py-2 px-4 border border-blue-300 hover:border-transparent rounded flex-grow"
