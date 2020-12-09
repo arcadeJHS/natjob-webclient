@@ -4,20 +4,21 @@
       <div class="min-w-0 relative flex-auto">
         <a class="hover:underline" :href="job.url" target="_BLANK">
           <h2 class="text-indigo-800 mb-0.5 inline">
-            <span class="font-semibold">{{ job.title }}</span>
+            <span class="font-semibold">{{ index }} - {{ job.title }}</span>
             <open-link-icon />
           </h2>
         </a>
-        <dl class="flex flex-wrap text-sm font-medium whitespace-pre">
+        <dl class="flex flex-wrap text-sm font-medium whitespace-pre pl-6">
           <div class="flex-none w-full mt-0.5">
             <dt class="inline mr-1 font-normal">Fonte originale:</dt>
             <dd class="inline">
-              <a v-if="job.originalSource" class="text-indigo-600 hover:underline" :href="job.originalSourceJobsUrl" target="_BLANK">
+              <a v-if="job.originalSourceJobsUrl && job.originalSource" class="text-indigo-600 hover:underline" :href="job.originalSourceJobsUrl" target="_BLANK">
                 {{ job.originalSource }}
                 <open-link-icon />
               </a>
+              <span v-if="!job.originalSourceJobsUrl && job.originalSource">{{ job.originalSource }}</span>
               <span v-else>n/a</span>
-              </dd>
+            </dd>
           </div>
           <div class="flex-none w-full mt-0.5">
             <dt class="inline mr-1 font-normal">Pubblicato il:</dt>
@@ -27,6 +28,7 @@
             <dt class="inline mr-1 font-normal">Dove:</dt>
             <dd class="inline">{{ job.location }}</dd>
             <button 
+              v-if="job.description"
               class="absolute right-0 bottom-1 text-blue-500 py-1 px-2 border border-blue-500 rounded"
               @click="toggleDetails">
               dettagli {{detailsVisible ? '-' : '+'}}
@@ -52,7 +54,8 @@ export default {
     OpenLinkIcon
   },
   props: [
-    'job'
+    'job',
+    'index'
   ],
   setup() {
     const toggleDetails = () => state.detailsVisible = !state.detailsVisible;

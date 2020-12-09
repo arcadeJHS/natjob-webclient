@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-lg font-semibold border-b border-green-500 text-indigo-800 p-4 relative">
+    <h2 class="text-lg font-semibold border-b border-white bg-blue-500 text-white p-4 relative">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{ source.results.length }})
@@ -19,7 +19,7 @@
     </h2>
 
     <ul v-if="jobsVisible" class="divide-y divide-gray-200 px-4">
-      <job v-for="job in source.results" :key="job.url" :job="job" />
+      <job v-for="(job, index) in source.results" :key="job.url" :job="job" :index="Number(index+1)" />
     </ul>
   </section>
 </template>
