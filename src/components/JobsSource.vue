@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="text-lg font-semibold border-b border-white bg-blue-500 text-white p-4 relative">
+    <h2 class="border-b border-pink-500 bg-white text-pink-500 p-4 relative">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{ source.results.length }})
@@ -10,7 +10,7 @@
         <span v-if="source.error" class="text-red-500">Error: {{ source.error }}</span>
         <button 
           v-if="!source.error && source.results.length"
-          class="hover:bg-blue-500 text-white py-2 px-4 border border-blue-300 hover:border-transparent rounded flex-grow"
+          class="bg-pink-500 text-white border border-transparent hover:bg-white hover:text-pink-500  hover:border-pink-500 px-4 py-2 rounded flex-grow"
           :class="{ 'bg-green-500': !jobsVisible, 'bg-red-500': jobsVisible }"
           @click="toggleJobsVisibility">
           {{jobsVisible ? 'nascondi' : 'mostra'}} risultati
@@ -18,7 +18,7 @@
       </div>
     </h2>
 
-    <ul v-if="jobsVisible" class="divide-y divide-gray-200 px-4">
+    <ul v-if="jobsVisible" class="divide-y divide-gray-300 px-4">
       <job v-for="(job, index) in source.results" :key="job.url" :job="job" :index="Number(index+1)" />
     </ul>
   </section>

@@ -8,11 +8,11 @@
             <open-link-icon />
           </h2>
         </a>
-        <dl class="flex flex-wrap text-sm font-medium whitespace-pre pl-6">
+        <dl class="flex flex-wrap text-sm font-medium whitespace-pre pl-6 text-gray-600">
           <div class="flex-none w-full mt-0.5">
             <dt class="inline mr-1 font-normal">Fonte originale:</dt>
             <dd class="inline">
-              <a v-if="job.originalSourceJobsUrl && job.originalSource" class="text-indigo-600 hover:underline" :href="job.originalSourceJobsUrl" target="_BLANK">
+              <a v-if="job.originalSourceJobsUrl && job.originalSource" class="text-indigo-800 hover:underline" :href="job.originalSourceJobsUrl" target="_BLANK">
                 {{ job.originalSource }}
                 <open-link-icon />
               </a>
@@ -29,7 +29,7 @@
             <dd class="inline">{{ job.location }}</dd>
             <button 
               v-if="job.description"
-              class="absolute right-0 bottom-1 text-blue-500 py-1 px-2 border border-blue-500 rounded"
+              class="absolute right-0 bottom-1 text-gray-400 py-1 px-2 border border-gray-300 rounded hover:text-pink-500 hover:border-pink-500"
               @click="toggleDetails">
               dettagli {{detailsVisible ? '-' : '+'}}
             </button>

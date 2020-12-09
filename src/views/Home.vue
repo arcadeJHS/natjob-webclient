@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center px-4 py-8">
+  <div class="flex flex-col items-center p-4">
     <div class="flex flex-col items-stretch w-full md:flex-row md:w-auto">
       <input 
         class="border border-gray-200 rounded p-2 mr-0 mb-2 md:mr-2 md:mb-0 md:w-60"
@@ -7,7 +7,7 @@
         v-model="keyword" 
         placeholder="parola chiave" />
       <button 
-        class="hover:bg-blue-500 text-white py-2 px-4 border border-blue-300 hover:border-transparent rounded bg-green-500"
+        class="bg-pink-500 text-white border border-transparent hover:bg-white hover:text-pink-500  hover:border-pink-500 px-4 rounded"
         @click="search">
         Cerca
       </button>

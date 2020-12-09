@@ -1,7 +1,7 @@
 <template>
-  <div class="bg-white text-pink-500 border-b-2 mb-0.5 border-pink-500 py-2 px-4 flex flex-col relative">
+  <div class="bg-white text-pink-500 border-b mb-0.5 border-pink-500 py-2 px-4 flex flex-col relative">
     <div class="flex flex-row items-center">
-      <span class="text-3xl mr-2">&#128040;</span>
+      <span class="text-3xl mr-3">&#128040;</span>
       NAT Job App
     </div>
     <button 
