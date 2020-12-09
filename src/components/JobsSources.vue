@@ -17,8 +17,6 @@ export default defineComponent({
   },
   async setup () {
     const store = useStore();
-
-    console.log(store.state.jobKeyword);
     
     const queryString = setQueryString({ 
       location: 'Bellinzona', 
