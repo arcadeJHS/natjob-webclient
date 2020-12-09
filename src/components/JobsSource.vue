@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2 class="border-b border-pink-500 bg-white text-pink-500 p-4 relative">
+    <h2 class="border-b border-pink-500 bg-white text-pink-500 p-2 md:p-4 relative">
       <a class="hover:underline" :href="source.url" target="_BLANK">
         {{ source.name }}
         ({{ source.results.length }})
