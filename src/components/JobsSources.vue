@@ -6,6 +6,7 @@
 
 <script>
 import { defineComponent, reactive, toRefs } from 'vue';
+import { useStore } from 'vuex';
 import JobsSource from '@/components/JobsSource.vue';
 import { setQueryString } from '@/utils/setQueryString.js';
 
@@ -15,15 +16,21 @@ export default defineComponent({
     JobsSource
   },
   async setup () {
+    const store = useStore();
+
+    console.log(store.state.jobKeyword);
+    
     const queryString = setQueryString({ 
       location: 'Bellinzona', 
       maxDistance: 50, 
-      jobKeyword: null 
+      jobKeyword: store.state.jobKeyword
     });
+
     const url = `${process.env.VUE_APP_API_BASE}/jobs${queryString}`;
 
     let state = reactive({
-      sources: []
+      sources: [],
+      keyword: store.state.jobKeyword
     });
     
     const getSources = async () => {
