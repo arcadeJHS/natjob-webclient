@@ -7,7 +7,7 @@
         v-model="keyword" 
         placeholder="parola chiave" />
       <button 
-        class="bg-pink-500 text-white border border-transparent hover:bg-white hover:text-pink-500  hover:border-pink-500 px-4 rounded"
+        class="bg-pink-500 text-white border border-transparent hover:bg-white hover:text-pink-500  hover:border-pink-500 px-4 py-2 rounded"
         @click="search">
         Cerca
       </button>
