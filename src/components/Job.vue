@@ -8,7 +8,7 @@
             <open-link-icon />
           </h2>
         </a>
-        <dl class="flex flex-wrap text-sm font-medium whitespace-pre pl-6 text-gray-600">
+        <dl class="flex flex-wrap text-sm font-medium whitespace-pre text-gray-600">
           <div class="flex-none w-full mt-0.5">
             <dt class="inline mr-1 font-normal">Fonte originale:</dt>
             <dd class="inline">
