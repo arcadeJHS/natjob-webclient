@@ -6,7 +6,7 @@
     </template>
 
     <template #fallback>
-      <div class="p-4 pt-8 text-gray-600">
+      <div class="p-4 text-gray-600">
         <div class="flex flex-col items-center">
           <p>Nat, il tuo personal koala-bot sta cercando!</p>
           <div class="animate-pulse my-10">
