@@ -2,7 +2,7 @@
   <Suspense>
 
     <template #default>
-      <jobs-sources />
+      <jobs-sources @fetchingdata="$emit('fetchingdata', $event)" />
     </template>
 
     <template #fallback>
@@ -27,6 +27,9 @@ export default {
   name: 'Jobs',
   components: {
     JobsSources
-  }
+  },
+  emits: [
+    'fetchingdata'
+  ]
 };
 </script>

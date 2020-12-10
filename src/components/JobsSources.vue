@@ -15,7 +15,12 @@ export default defineComponent({
   components: {
     JobsSource
   },
-  async setup () {
+  emits: [
+    // so far, better to define custom events all lowercase, no hyphens
+    // https://stackoverflow.com/questions/64220737/vue-3-emit-warning-extraneous-non-emits-event-listeners
+    'fetchingdata'
+  ],
+  async setup (props, context) {
     const store = useStore();
     
     const queryString = setQueryString({ 
@@ -32,7 +37,10 @@ export default defineComponent({
     });
     
     const getSources = async () => {
-      return await fetch(url, {method: 'GET'}).then(response => response.json());
+      context.emit('fetchingdata', true);
+      const data = await fetch(url, {method: 'GET'}).then(response => response.json());
+      context.emit('fetchingdata', false);
+      return data;
     }
 
     state.sources = await getSources();
