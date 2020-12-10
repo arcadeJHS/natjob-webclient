@@ -2,7 +2,7 @@
   <div class="bg-white text-pink-500 border-b mb-0.5 border-pink-500 py-2 px-4 flex flex-col relative">
     <router-link to="/" class="flex items-center max-w-max">
       <span class="text-3xl mr-3">&#128040;</span>
-      NAT Job App
+      NatJob
     </router-link>
 
     <button 

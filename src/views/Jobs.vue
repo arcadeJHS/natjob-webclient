@@ -8,11 +8,11 @@
     <template #fallback>
       <div class="p-4 pt-8 text-gray-600">
         <div class="flex flex-col items-center">
-          <p>Ciao Nat, sono il tuo koala-bot!</p>
+          <p>Nat, il tuo personal koala-bot sta cercando!</p>
           <div class="animate-pulse my-10">
             <p class="animate-spin text-5xl">&#128040;</p>
           </div>
-          <p>Sto cercando, abbi pazienza!</p>
+          <p>Abbi pazienza!</p>
         </div>
       </div>
     </template>
