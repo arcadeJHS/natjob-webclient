@@ -35,7 +35,7 @@
             </button>
           </div>
           
-          <div v-if="detailsVisible" class="flex-none w-full mt-1 p-2 bg-gray-100 border border-blue-500 rounded whitespace-pre-line">
+          <div v-if="detailsVisible" class="flex-none w-full mt-1 p-2 bg-gray-50 border border-pink-500 rounded whitespace-pre-line">
             {{ job.description.replaceAll('&nbsp;', ' ').replace(/[\r\n]{2,}/g, "\n") }}
           </div>
         </dl>
