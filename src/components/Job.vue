@@ -4,7 +4,7 @@
       <div class="min-w-0 relative flex-auto">
         <a class="hover:underline" :href="job.url" target="_BLANK">
           <h2 class="text-indigo-800 mb-0.5 inline">
-            <span class="font-semibold">{{ index }} - {{ job.title }}</span>
+            <span class="font-semibold">{{ index }} - <span v-html="job.title"></span></span>
             <open-link-icon />
           </h2>
         </a>
@@ -17,7 +17,7 @@
                 <open-link-icon />
               </a>
               <span v-if="!job.originalSourceJobsUrl && job.originalSource">{{ job.originalSource }}</span>
-              <span v-else>n/a</span>
+              <span v-if="!job.originalSourceJobsUrl && !job.originalSource">n/a</span>
             </dd>
           </div>
           <div class="flex-none w-full mt-0.5">
